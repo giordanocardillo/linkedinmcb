@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+        <name>LinkedIn Member or Company Button</name>
+        <author>Giordano Cardillo</author>
+        <creationDate>August 16th, 2012</creationDate>
+        <copyright>Giordano Cardillo</copyright>
+        <license>GNU General Public License V3</license>
+        <authorEmail>info@giordanocardillo.it</authorEmail>
+        <authorUrl>http://www.giordanocardillo.it</authorUrl>
+        <description><![CDATA[<p>LinkedIn Member or Company Button</p><p><strong>Usage:</strong><br />{linkedinmcb URL (or company ID)|DISPLAY MODE (inline/hover/click/popup)|SHOW CONNECTIONS (true/false)}</p><p>Display mode and Show connections are optional parameters. If you don't input them, plugin will use the default settings (that you can edit in plugin settings).</p>]]></description>
+        <version>1.0</version>
+        <languages>
+   			<language tag="en-GB">en-GB.plg_content_linkedinmcb.ini</language>
+   			<language tag="it-IT">it-IT.plg_content_linkedinmcb.ini</language>
+		</languages>
+        <files>
+                <filename plugin="linkedinmcb">linkedinmcb.php</filename>
+                <filename>index.html</filename>
+        </files>
+        <config>
+			<fields name="params">
+				<fieldset name="basic">
+					<field name="defaultsDescriptionText" type="spacer" label="PLG_CONTENT_LINKEDINMCB_DEFAULTS_LABEL"/>
+					<field name="displayMode" type="list" default="inline" label="PLG_CONTENT_LINKEDINMCB_DISPLAYMODE" description="PLG_CONTENT_LINKEDINMCB_DISPLAYMODE_DESC">
+						<option value="inline">PLG_CONTENT_LINKEDINMCB_INLINE</option>
+						<option value="hover">PLG_CONTENT_LINKEDINMCB_ICON_ONHOVER</option>
+						<option value="click">PLG_CONTENT_LINKEDINMCB_ICON_ONCLICK</option>
+						<option value="popup">PLG_CONTENT_LINKEDINMCB_POPUP</option>
+					</field>
+					<field name="connections" type="radio" default="true" label="PLG_CONTENT_LINKEDINMCB_CONNECTIONS" description="PLG_CONTENT_LINKEDINMCB_CONNECTIONS_DESC">
+						<option value="true">PLG_CONTENT_LINKEDINMCB_SHOW</option>
+						<option value="false">PLG_CONTENT_LINKEDINMCB_HIDE</option> 
+					</field>
+				</fieldset>
+				<fieldset name="advanced">
+					<field name="APIKey" type="text" label="PLG_CONTENT_LINKEDINMCB_APIKEY" description="PLG_CONTENT_LINKEDINMCB_APIKEY_DESC" />
+				</fieldset>
+			</fields>
+        </config>
+</extension>
