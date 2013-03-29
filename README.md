@@ -7,7 +7,7 @@ This is just a Joomla! content plugin to allow the use of a LinkedIn Member (or 
 
 ###How to use it?
 
-This plugin is simple to use like A-B-C; here you find the rerence:
+This plugin is simple to use like A-B-C; here you find the reference:
 
 `{linkedinmcb URL (or company ID)|DISPLAY MODE (inline/hover/click/popup)|SHOW CONNECTIONS (true/false)}`
 
