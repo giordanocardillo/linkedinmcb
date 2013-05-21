@@ -7,15 +7,14 @@ defined('_JEXEC') or die;
 class plgContentLinkedInMCB extends JPlugin
 {
     public function onContentPrepare($context, &$row, &$params, $page = 0){
-		$regex_one='/({linkedinmcb\s*)((http:\/\/([a-z]{2}|www)\.linkedin\.com)\/(in|pub)\/[a-zA-Z0-9-\/]{3,}|[0-9]{3,10})\|?(inline|click|hover|popup)?\|?(true|false)?}/';
-		$regex_all='/{linkedinmcb\s*.*}/i';
+		$regex_one='%\{linkedinmcb (http://([a-z]{2}|www)\.linkedin\.com/(in|pub)/([a-zA-Z0-9-\/]{3,}|[0-9]{3,10}))(\|(hover|popup|click|inline))?(\|(true|false))?}%';
 		$matches=array();
 		preg_match_all($regex_one, $row->text, $matches);
 		if(!empty($matches[0])){
 			$APIKey=$this->params->get('APIKey');
 			$linkedinProfiles=array();
 			for($i=0;$i<count($matches[0]);$i++){
-				$linkedinProfiles[]=array("ref"=>$matches[2][$i],"displayMode"=>$matches[6][$i],"connections"=>$matches[7][$i]);
+				$linkedinProfiles[]=array("ref"=>$matches[1][$i],"displayMode"=>$matches[6][$i],"connections"=>$matches[8][$i]);
 			}
 			$defaultParams=array();
 			$defaultParams['displayMode']=$this->params->get('displayMode');
