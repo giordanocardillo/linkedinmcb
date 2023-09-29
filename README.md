@@ -1,11 +1,11 @@
 LinkedIn Member or Company Plugin
 ===========
 
-###What is it?
+### What is it?
 
 This is just a Joomla! content plugin to allow the use of a LinkedIn Member (or Company) button inside your contents.
 
-###How to use it?
+### How to use it?
 
 This plugin is simple to use like A-B-C; here you find the reference:
 
